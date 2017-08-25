@@ -10,12 +10,17 @@
 
 - dockerfile
 
-    FROM primetoninc/jdk:1.7
-    LABEL maintainer="lizw@primeton.com"
-    # TODO XXX
-    # build your application
-    # ...
-    ENTRYPOINT [ "/entrypoint.sh" ]
+```bash
+FROM primetoninc/jdk:1.7
+
+LABEL maintainer="lizw@primeton.com"
+
+# TODO XXX
+# build your application
+# ...
+
+ENTRYPOINT [ "/entrypoint.sh" ]
+```
     
 
 
