@@ -4,11 +4,11 @@
 
 # Repository
 
-## docker pull
+- docker pull
 
     docker pull primetoninc/jdk:1.7
 
-## dockerfile
+- dockerfile
 
     FROM primetoninc/jdk:1.7
 
@@ -18,7 +18,7 @@
     # ...
 
 
-## docker build
+- docker build
   
     git clone https://github.com/orgs/docker-repository/jdk.git
     cd jdk
