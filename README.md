@@ -3,16 +3,18 @@
 Oracle jdk 1.8
 
 # Repository
+  
 
 - docker pull
-
+  
 ```bash
 docker pull primetoninc/jdk:1.8
 docker pull primetoninc/jdk:latest
 ```
+  
 
 - dockerfile
-
+  
 ```bash
 FROM primetoninc/jdk:1.8
 
@@ -25,6 +27,7 @@ LABEL maintainer="lizw@primeton.com"
 ENTRYPOINT [ "/entrypoint.sh" ]
 ```
   
+
 - docker build
   
 ```bash
