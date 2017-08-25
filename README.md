@@ -3,15 +3,17 @@
 Oracle jdk 1.7
 
 # Repository
-
+  
 - docker pull
+  
 
 ```bash
 docker pull primetoninc/jdk:1.7
 ```
   
-- dockerfile
 
+- dockerfile
+  
 ```bash
 FROM primetoninc/jdk:1.7
 
@@ -24,8 +26,9 @@ LABEL maintainer="lizw@primeton.com"
 ENTRYPOINT [ "/entrypoint.sh" ]
 ```
   
-- docker build
 
+- docker build
+  
 ```bash
 git clone https://github.com/orgs/docker-repository/jdk.git
 cd jdk
