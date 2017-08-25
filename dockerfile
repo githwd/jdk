@@ -14,7 +14,7 @@ ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
     LC_ALL="en_US.UTF-8"
 
-ENV JAVA_VERSION="1.8.0_144"
+ENV JAVA_VERSION="1.7.0_80"
 
 ENV JAVA_HOME="/usr/local/jdk${JAVA_VERSION}"
 
@@ -29,7 +29,7 @@ RUN \cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 # ADD resources/jdk*.tar.gz /usr/local/
 RUN curl --fail --location --retry 3 \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz?AuthParam=1503631290_65b4ec6f583005451a725eaa54a88778 \
+        http://ftp.osuosl.org/pub/funtoo/distfiles/oracle-java/jdk-7u80-linux-x64.tar.gz \
         -o /tmp/jdk.tar.gz \
     && tar -zxf /tmp/jdk.tar.gz -C /usr/local/ \
     && \rm -f /tmp/jdk.tar.gz ${JAVA_HOME}/src.zip ${JAVA_HOME}/javafx-src.zip
