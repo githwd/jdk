@@ -1,30 +1,40 @@
 # Readme
 
-    Oracle jdk 1.8
+Oracle jdk 1.8
 
 # Repository
 
 - docker pull
 
-    docker pull primetoninc/jdk:1.8
-    docker pull primetoninc/jdk:latest
+```bash
+docker pull primetoninc/jdk:1.8
+docker pull primetoninc/jdk:latest
+```
 
 - dockerfile
 
-    FROM primetoninc/jdk:1.8
-    LABEL maintainer="lizw@primeton.com"
-    # TODO XXX
-    # build your application
-    # ...
-    ENTRYPOINT [ "/entrypoint.sh" ]
-    
+```bash
+FROM primetoninc/jdk:1.8
 
+LABEL maintainer="lizw@primeton.com"
+
+# TODO XXX
+# build your application
+# ...
+
+ENTRYPOINT [ "/entrypoint.sh" ]
+```
+  
 - docker build
   
-    git clone https://github.com/orgs/docker-repository/jdk.git
-    cd jdk
-    docker build --rm -t your.registry.com/library/jdk:1.8 .
-    docker login your.registry.com
-    docker push your.registry.com/library/jdk:1.8
-    docker tag your.registry.com/library/jdk:1.8 your.registry.com/library/jdk:latest
-    docker push your.registry.com/library/jdk:1.8
+```bash
+git clone https://github.com/docker-repository/jdk.git
+cd jdk
+git checkout 1.8
+git pull
+docker build --rm -t your.registry.com/library/jdk:1.8 .
+docker login your.registry.com
+docker push your.registry.com/library/jdk:1.8
+docker tag your.registry.com/library/jdk:1.8 your.registry.com/library/jdk:latest
+docker push your.registry.com/library/jdk:1.8
+```
