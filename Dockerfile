@@ -29,7 +29,11 @@ RUN \cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 # ADD resources/jdk*.tar.gz /usr/local/
 RUN wget --tries=3 \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-linux-x64.tar.gz \
+        http://download.oracle.com/otn-pub/java/jdk/8u152-b16/aa0333dd3019491ca4f6ddbe78cdb6d0/jdk-8u152-linux-x64.tar.gz \
         -O /tmp/jdk.tar.gz \
     && tar -zxf /tmp/jdk.tar.gz -C /usr/local/ \
     && \rm -f /tmp/jdk.tar.gz ${JAVA_HOME}/src.zip ${JAVA_HOME}/javafx-src.zip
+
+# Find avaliable downloads
+# curl -s http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html | \
+#        awk "/downloads\['/ && ! /demos/ && /\['files'\]\['jdk/"
