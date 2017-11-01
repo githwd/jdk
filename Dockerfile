@@ -14,7 +14,7 @@ ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US:en" \
     LC_ALL="en_US.UTF-8"
 
-ENV JAVA_VERSION="1.8.0_144"
+ENV JAVA_VERSION="1.8.0_152"
 
 ENV JAVA_HOME="/usr/local/jdk${JAVA_VERSION}"
 
